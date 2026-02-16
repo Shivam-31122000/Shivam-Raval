@@ -8,10 +8,10 @@ import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
   return (
-    <div className="cursor-none">
+    <div className="cursor-none overflow-x-hidden">
       <CustomCursor />
       <Sidebar />
-      <main className="lg:ml-80 w-full">
+      <main className="lg:ml-80 w-full max-w-full overflow-x-hidden">
         <HeroSection />
         <SkillsSection />
         <ProjectsSection />
