@@ -8,18 +8,18 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col justify-center px-6 md:px-16 lg:px-24 py-20 relative border-b border-border"
+      className="min-h-screen flex flex-col justify-center px-4 sm:px-6 md:px-10 lg:px-16 py-20 relative border-b border-border overflow-hidden"
     >
-      <div className="flex flex-col-reverse md:flex-row items-center gap-16">
-        <div className="w-full md:w-3/5 z-10">
+      <div className="flex flex-col-reverse md:flex-row items-center gap-8 lg:gap-12 w-full">
+        <div className="w-full md:flex-1 z-10 min-w-0">
           <p className="text-primary uppercase tracking-[0.2em] text-xs font-bold mb-6 flex items-center gap-2">
             <span className="w-8 h-[1px] bg-primary" /> Introduction
           </p>
-          <h2 className="text-5xl md:text-7xl font-bold text-primary leading-[1.1] mb-8">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary leading-[1.1] mb-8">
             Shivam Raval <br />
             <span className="text-muted-foreground">Sr. Android Dev.</span>
           </h2>
-          <p className="text-xl text-foreground max-w-lg mb-10 leading-relaxed font-light">
+          <p className="text-lg lg:text-xl text-foreground max-w-lg mb-10 leading-relaxed font-light">
             Spearheaded the scaling of{" "}
             <span className="text-primary font-medium">Fancall</span> from 10k to{" "}
             <span className="text-primary font-medium">185k+ downloads</span>. I
@@ -42,12 +42,12 @@ const HeroSection = () => {
           </button>
         </div>
 
-        <div className="w-full md:w-2/5 relative group">
+        <div className="w-full md:w-[280px] lg:w-[320px] shrink-0 relative group">
           <div className="relative w-full aspect-[3/4] overflow-hidden bg-card">
             <img
               src={profilePhoto}
               alt="Shivam Raval"
-              className="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-1000 ease-out"
+              className="object-cover object-top w-full h-full grayscale group-hover:grayscale-0 transition duration-1000 ease-out"
             />
             <div className="absolute inset-0 border border-border pointer-events-none z-20" />
           </div>

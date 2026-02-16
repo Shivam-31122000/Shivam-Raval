@@ -11,7 +11,7 @@ const Index = () => {
     <div className="cursor-none overflow-x-hidden">
       <CustomCursor />
       <Sidebar />
-      <main className="lg:ml-80 w-full max-w-full overflow-x-hidden">
+      <main className="lg:ml-80 w-auto max-w-full overflow-x-hidden box-border">
         <HeroSection />
         <SkillsSection />
         <ProjectsSection />
