@@ -42,7 +42,7 @@ const HeroSection = () => {
           </button>
         </div>
 
-        <div className="w-full md:w-[280px] lg:w-[320px] shrink-0 relative group">
+        <div className="w-full md:w-[350px] lg:w-[480px] xl:w-[550px] shrink-0 relative group">
           <div className="relative w-full aspect-[3/4] overflow-hidden bg-card">
             <img
               src={profilePhoto}
