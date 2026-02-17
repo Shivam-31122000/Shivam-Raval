@@ -6,35 +6,88 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { Star, StarHalf } from "lucide-react";
 import { motion } from "framer-motion";
 
 const reviews = [
     {
-        name: "Alex Johnson",
-        role: "CEO, TechStart",
-        content: "Shivam delivered an exceptional website that perfectly captures our brand. The attention to detail and animations are outstanding.",
+        name: "Chinonso Dombili",
+        role: "Client, Challenge App",
+        content: "Shivam is a highly skilled developer who brought our vision for the Challenge App to life. His expertise in Kotlin and Jetpack Compose is top-notch.",
         rating: 5,
     },
     {
-        name: "Sarah Williams",
-        role: "Founder, DesignLab",
-        content: "Working with Shivam was a pleasure. He understood our vision immediately and executed it with precision. Highly recommended!",
+        name: "Chales Anderson",
+        role: "CEO, Hooked App",
+        content: "The Hooked App required a complex real-time video infrastructure, and Shivam delivered flawlessly. Great communication and technical skill.",
+        rating: 4.5,
+    },
+    {
+        name: "Andru Johnson",
+        role: "Product Owner, Lend Driver",
+        content: "Working on the Lend platforms was a smooth process. Shivam's attention to detail in the customer and driver interfaces was exceptional.",
         rating: 5,
     },
     {
-        name: "Michael Chen",
-        role: "Product Manager, Innovate Inc",
-        content: "The best developer I've worked with. Fast, professional, and the code quality is top-notch. Our site performance improved significantly.",
+        name: "Ryan Sprakett",
+        role: "Founder, Postalott",
+        content: "Excellent work on Postalott. The app is fast, reliable, and our users love the smooth animations. Highly recommend for any mobile project.",
+        rating: 4,
+    },
+    {
+        name: "Ashly Clark",
+        role: "CTO, Chatalott",
+        content: "Chatalott's real-time messaging features were perfectly implemented. Shivam's knowledge of Socket.IO and Firebase made a huge difference.",
+        rating: 4.5,
+    },
+    {
+        name: "Emily Chen",
+        role: "Manager, 7 Clue",
+        content: "The 7 Clue game logic was tricky, but Shivam handled it with ease. The final product exceeded our expectations.",
         rating: 5,
     },
     {
-        name: "Emily Davis",
-        role: "Marketing Director, CreativeFlow",
-        content: "Incredible work! The site is fast, responsive, and looks amazing on all devices. Shivam is a true professional.",
+        name: "Marcus Rashford",
+        role: "Directer, Flip talk",
+        content: "Shivam is proactive and dedicated. He helped us scale Flip talk while maintaining performance. A valuable addition to any team.",
+        rating: 4,
+    },
+    {
+        name: "Sarah Jenkins",
+        role: "Lead, Flirt pen",
+        content: "Creative and technical – that's Shivam. He built a beautiful and functional UI for Flirt pen that our users adore.",
+        rating: 4.5,
+    },
+    {
+        name: "Davina Miller",
+        role: "CEO, Ollama AI",
+        content: "Integrating LLMs into our mobile app was a breeze with Shivam. He's ahead of the curve when it comes to AI integration.",
+        rating: 5,
+    },
+    {
+        name: "James Wilson",
+        role: "Head of Dev, Dance Anim",
+        content: "Animations in Dance Anim are fluid and responsive, thanks to Shivam's deep understanding of motion design and performance.",
         rating: 5,
     },
 ];
+
+const RatingStars = ({ rating }: { rating: number }) => {
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
+
+    return (
+        <div className="flex gap-1 mb-4">
+            {[...Array(fullStars)].map((_, i) => (
+                <Star key={`full-${i}`} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
+            ))}
+            {hasHalfStar && <StarHalf className="w-4 h-4 fill-yellow-500 text-yellow-500" />}
+            {[...Array(5 - Math.ceil(rating))].map((_, i) => (
+                <Star key={`empty-${i}`} className="w-4 h-4 text-yellow-500/30" />
+            ))}
+        </div>
+    );
+};
 
 const ReviewsSection = () => {
     return (
@@ -71,11 +124,7 @@ const ReviewsSection = () => {
                                     <Card className="bg-card/50 backdrop-blur-sm border-white/5 h-full hover:border-white/20 transition-colors duration-300">
                                         <CardContent className="flex flex-col justify-between p-6 h-full gap-6">
                                             <div>
-                                                <div className="flex gap-1 mb-4">
-                                                    {[...Array(review.rating)].map((_, i) => (
-                                                        <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
-                                                    ))}
-                                                </div>
+                                                <RatingStars rating={review.rating} />
                                                 <p className="text-muted-foreground italic relative">
                                                     "{review.content}"
                                                 </p>
@@ -97,5 +146,6 @@ const ReviewsSection = () => {
         </section>
     );
 };
+
 
 export default ReviewsSection;
