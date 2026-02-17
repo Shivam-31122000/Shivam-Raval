@@ -5,6 +5,8 @@ import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ContactSection from "@/components/ContactSection";
+import StatsSection from "@/components/StatsSection";
+import ReviewsSection from "@/components/ReviewsSection";
 
 const Index = () => {
   return (
@@ -13,9 +15,11 @@ const Index = () => {
       <Sidebar />
       <main className="lg:ml-80 w-auto max-w-full overflow-x-hidden box-border">
         <HeroSection />
+        <StatsSection />
         <SkillsSection />
         <ProjectsSection />
         <ExperienceSection />
+        <ReviewsSection />
         <ContactSection />
       </main>
     </div>
