@@ -64,38 +64,47 @@ const ProjectDetail = () => {
             <h2 className="text-2xl text-primary font-bold mb-6">Overview</h2>
             <p className="text-foreground text-lg leading-relaxed mb-8">{project.longDescription}</p>
 
-            <h2 className="text-2xl text-primary font-bold mb-6">Key Features</h2>
-            <ul className="space-y-3 text-foreground">
-              <li className="flex items-start gap-3">
-                <span className={`w-2 h-2 rounded-full ${project.accentBg} mt-2 shrink-0`} />
-                Scalable architecture handling thousands of concurrent users
-              </li>
-              <li className="flex items-start gap-3">
-                <span className={`w-2 h-2 rounded-full ${project.accentBg} mt-2 shrink-0`} />
-                Real-time features with low-latency communication
-              </li>
-              <li className="flex items-start gap-3">
-                <span className={`w-2 h-2 rounded-full ${project.accentBg} mt-2 shrink-0`} />
-                99% crash-free rate with comprehensive error handling
-              </li>
-              <li className="flex items-start gap-3">
-                <span className={`w-2 h-2 rounded-full ${project.accentBg} mt-2 shrink-0`} />
-                Optimized performance with efficient memory management
-              </li>
-            </ul>
+            {/* Case Study Gallery */}
+            {project.gallery && (
+              <div className="mt-20">
+                <h2 className="text-2xl text-primary font-bold mb-12 flex items-center gap-4">
+                  <span className="w-12 h-[1px] bg-primary" /> Project Gallery
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {project.gallery.map((img, index) => (
+                    <div key={index} className="space-y-4 group">
+                      <div className="hover-img-zoom w-full aspect-[4/3] bg-card overflow-hidden border border-border/50 group-hover:border-primary/30 transition-colors">
+                        <img
+                          src={img.url}
+                          alt={img.title}
+                          className="object-cover w-full h-full opacity-80 group-hover:opacity-100 transition-opacity"
+                        />
+                      </div>
+                      <div>
+                        <h4 className="text-primary font-bold text-lg">{img.title}</h4>
+                        <p className="text-muted-foreground text-sm leading-relaxed">{img.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </section>
 
         {/* Contact CTA */}
-        <section className="px-6 md:px-16 lg:px-24 py-24">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8">
-            Interested in similar work?
+        <section className="px-6 md:px-16 lg:px-24 py-24 bg-card/30">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8 tracking-tighter">
+            Interested in similar technical excellence?
           </h2>
           <a
             href="mailto:ravalshivam311222000@gmail.com"
-            className="group inline-flex items-center gap-3 border border-border px-8 py-4 uppercase text-xs font-bold tracking-widest text-foreground hover:bg-primary hover:text-primary-foreground transition duration-300"
+            className="group relative inline-flex items-center gap-3 border border-border px-10 py-5 uppercase text-xs font-bold tracking-[0.2em] text-foreground overflow-hidden"
           >
-            Get in Touch
+            <span className="absolute inset-0 bg-primary translate-y-[101%] group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+            <span className="relative z-10 group-hover:text-primary-foreground transition-colors duration-500">
+              Start a Conversation
+            </span>
           </a>
         </section>
       </main>

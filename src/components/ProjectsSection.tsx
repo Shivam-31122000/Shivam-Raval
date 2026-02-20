@@ -9,14 +9,36 @@ export const projects = [
     title: "Fancall",
     subtitle: "Creator Platform • 185k+ Downloads",
     description:
-      "A creator-brand connection platform. Scaled to 185k+ downloads with 99% stability. Click to view full case study.",
+      "Spearheaded technical development and scaling from 10k to 185k+ downloads. Achieved 99% stability via Agora, Socket.IO, and Meta integrations.",
     image: fancallImg,
     featured: true,
     accentColor: "text-blue-accent",
     accentBg: "bg-blue-accent",
-    tags: ["Kotlin", "Agora", "Socket.IO", "Firebase"],
+    tags: ["Kotlin", "Agora", "Socket.IO", "Firebase", "Meta", "MSG91"],
     longDescription:
-      "Fancall is a revolutionary platform connecting fans with their favorite creators through live video calls. As the Sr. Android Developer, I spearheaded the scaling from 10k to 185k+ downloads while maintaining a 99% crash-free rate. The app features real-time video calling powered by Agora, instant messaging via Socket.IO, and a robust payment system.",
+      "Spearheaded the complete technical development and scaling of the Fancall app, growing the user base from 10,000+ to 185,000+ downloads on the Play Store. Independently handled challenges related to performance, user retention, and backend scalability. Increased crash-free users ratio from 50-55% to 97-99%, showcasing a 45% increase in app stability, which significantly improved user experience, retention, and download growth.\n\nKey Technical Areas:\n• Agora Integration: Implemented Agora-based 1:1 voice and video calling for brands and celebrity interactions.\n• Service Management: Built long-running and short-time services with various foreground modes for robust Android lifecycle handling.\n• Socket.IO: Real-time communication features for chat and live updates.\n• Meta Integration: Enabled seamless onboarding with Facebook and Instagram using Meta permissions.\n• MSG91 Integration: Configured and managed SMS delivery system for authentication and alerts.\n• Firebase: Utilized Firebase for push notifications, deep linking, and real-time event handling.\n• GPS Integration: Built features based on real-time location tracking and geofencing.\n• Marketing Events: Developed custom Meta event logging to support app marketing, retention analysis, and campaign targeting.\n\nMajor Features Delivered:\n• 1:1 Video & Voice Calls with brands and celebrities (auto audio switching near the ear).\n• 1:1 Custom Chat Module supporting in-app payments during live conversations.\n• Single Instagram Login Support - a rare and technically challenging authentication flow.\n• First-of-its-kind Reel Feature: Play/Pause, Mute/Unmute, Bluetooth toggle, Like animations, Fast Forward/Rewind.\n• Swipe Navigation for YouTube and Instagram videos in one unified experience.",
+    gallery: [
+      {
+        url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+        title: "Agora-Powered Video Calling",
+        desc: "Seamless 1:1 video interactions between creators and fans with low-latency communication."
+      },
+      {
+        url: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?q=80&w=1200&auto=format&fit=crop",
+        title: "Real-time Messaging & Payments",
+        desc: "Custom chat module with Socket.IO and integrated in-app payments for live consultations."
+      },
+      {
+        url: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=1200&auto=format&fit=crop",
+        title: "Innovative Reels Feature",
+        desc: "A first-of-its-kind unified video experience with rich media controls and swipe navigation."
+      },
+      {
+        url: "https://images.unsplash.com/photo-1551288049-bbbda536639a?q=80&w=1200&auto=format&fit=crop",
+        title: "99% Crash-Free Performance",
+        desc: "Rigorous performance optimization and lifecycle management resulting in a 45% boost in stability."
+      }
+    ]
   },
   {
     id: "challenge",
