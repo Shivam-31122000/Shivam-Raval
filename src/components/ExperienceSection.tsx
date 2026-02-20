@@ -33,7 +33,7 @@ const experiences = [
     period: "2020 – 2021",
     company: "Creart Solutions",
     location: "Ahmedabad, India",
-    link: "https://creartsolutions.in",
+    link: "https://www.creartsolutions.com/",
     desc: "• Worked on PHP-based backend projects and conducted trending tech research.",
     current: false,
   },
@@ -56,8 +56,8 @@ const ExperienceSection = () => (
         >
           <div
             className={`absolute w-3 h-3 rounded-full -left-[6.5px] top-2 transition ${exp.current
-                ? "bg-primary group-hover:scale-125"
-                : "bg-muted-foreground group-hover:bg-primary"
+              ? "bg-primary group-hover:scale-125"
+              : "bg-muted-foreground group-hover:bg-primary"
               }`}
           />
           <div className="w-full md:w-1/3">
