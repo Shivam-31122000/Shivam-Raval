@@ -72,11 +72,16 @@ const HeroSection = () => {
             <span className="text-muted-foreground font-light">Sr. Android Dev.</span>
           </h2>
 
-          <p className="text-lg lg:text-xl text-foreground max-w-lg mb-10 leading-relaxed font-light">
-            Spearheaded the scaling of{" "}
-            <span className="text-primary font-medium">Fancall</span> from 10k to{" "}
-            <span className="text-primary font-medium">185k+ downloads</span>. I
-            specialize in building robust, crash-free (99%) Android applications.
+          <p className="text-lg lg:text-xl text-foreground max-w-2xl mb-10 leading-relaxed font-light">
+            <span className="text-primary font-medium">Innovative Android Developer</span> with
+            extensive experience in creating{" "}
+            <span className="text-primary font-medium">scalable, high-performance applications</span>{" "}
+            and a strong foundation in <span className="text-primary font-medium">Kotlin, Java</span>,
+            and modern architectural patterns. Proven track record in enhancing{" "}
+            <span className="text-primary font-medium">application stability</span> and{" "}
+            <span className="text-primary font-medium">user engagement</span>. Eager to leverage expertise
+            as a <span className="text-primary font-medium">Sr. Android Developer</span> to drive
+            impactful software solutions.
           </p>
 
           <div className="flex flex-wrap gap-4">
