@@ -2,13 +2,22 @@ import { ExternalLink, Briefcase } from "lucide-react";
 
 const experiences = [
   {
+    role: "Sr.Software Engineer",
+    period: "03/2026 – 06/2026",
+    company: "Solution Analysts",
+    location: "Ahmedabad, India",
+    link: "https://www.solutionanalysts.com/",
+    desc: "Spearheaded the development of a multinational automotive e-commerce platform for the Saudi Arabian market, facilitating seamless browsing and purchasing of both new showroom and second-hand vehicles.\n\n• Architected and integrated advanced AI-driven conversational chat support to enhance user engagement and provide real-time assistance.\n• Implemented Google Vision API to enable a robust, integrated document scanner, digitizing and automating end-to-end paperwork processing.\n• Ensured high-quality application performance and reliability while collaborating across cross-functional teams in a fast-paced environment.\n• Delivered scalable digital solutions that modernized the vehicle purchasing journey and significantly streamlined administrative workflows.",
+    current: true,
+  },
+  {
     role: "Software Engineer",
-    period: "10/2025 – 12/2025",
+    period: "10/2025 – 02/2026",
     company: "Ivy Mobility",
     location: "Chennai, India",
     link: "https://www.ivymobility.com",
     desc: "In a fast-paced 2-month engagement at Ivy Mobility, a B2B SaaS company, I applied my Android development skills to a sophisticated enterprise application. This role provided me with hands-on experience in refining a mission-critical platform used daily by a global workforce, focusing on performance enhancements and UI polish.",
-    current: true,
+    current: false,
   },
   {
     role: "Sr. Android Developer",
